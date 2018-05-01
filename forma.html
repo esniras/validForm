@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title> Darbuotojo registracija </title>
-	<h1> Registracija</h1>
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
-	</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js">
-	</script>
-	<script src="js/script.js"></script>  
-	<link rel="stylesheet" type="text/css" href="css/seksi.css">
-	<meta charset="UTF-8">
-	
-</head>
-
-<body>
-
-	<form id="register">
-		Vardas:<br>
-			<input type="text" id="vardas" placeholder="Vardas" name="vardas"><br>
-		
-		Pavardė:<br>
-			<input type="text" id="pavarde" placeholder="Pavardė" name="pavarde"> <br>
-		
-		Vardas, pavardė:<br>
-			<input type="text" id="vardaspavarde" name="vardaspavarde" disabled><br>
-		
-		El. paštas:<br>
-			<input name="email" placeholder="El. paštas" type="text"><br>
-		
-		Gimimo data:<br>
-			<input type="date" name="gimimodata" placeholder="Gimimo data"><br>
-		
-		Miestas:<br>
-			<select>
-				<option></option>
-				<option value="Vilnius">Vilnius</option>
-				<option value="Kaunas">Kaunas</option>
-				<option value="Klaipėda">Klaipėda</option>
-				<option value="Šiauliai">Šiauliai</option>
-				<option value="Pietinis">Pietinis</option>
-			</select>
-		<br>
-		
-		Adresas:<br>
-			<input type="text" name="adresas" placeholder="Gyvenamoji vieta"><br>
-		
-		Telefono numeris:<br>
-			+3706 <input type="text" name="numeris" onkeypress="isInputNumber(event)">
-			
-		
-		<br>
-		<!--<button type="button" value="Pateikti" onclick="buttonPop()">Pateikti</button> -->
-		<button type="button" id="submit-button" value="submit">Pateikti</button>
-		<button type="reset" value="Reset">Išvalyti</button>
-		
-
-	</form>
-
-</body>
+    <head>
+        <title> Darbuotojo registracija </title>
+        <h1> Registracija</h1>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+        <script src="js/script.js"></script>  
+        <link rel="stylesheet" type="text/css" href="css/seksi.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form name="myForm" id="register"">
+            Vardas:<br>
+            <input type="text" id="vardas" placeholder="Vardas" name="vardas"><br> 
+            Pavardė:<br>
+            <input type="text" id="pavarde" placeholder="Pavardė" name="pavarde"><br>
+            Vardas, pavardė:<br>
+            <input type="text" id="vardaspavarde" name="vardaspavarde" disabled><br>
+            El. paštas:<br>
+            <input name="email" id="email" placeholder="El. paštas" type="text"><br>
+            Gimimo data:<br>
+            <input type="date" name="gimimodata" id="gimimodata" placeholder="Gimimo data"><br>
+            Miestas:<br>
+            <select id="miestas">
+                <option></option>
+                <option value="Vilnius">Vilnius</option>
+                <option value="Kaunas">Kaunas</option>
+                <option value="Klaipėda">Klaipėda</option>
+                <option value="Šiauliai">Šiauliai</option>
+                <option value="Pietinis">Pietinis</option>
+            </select>
+            <br>
+            Adresas:<br>
+            <input type="text" name="adresas" id="adresas" placeholder="Gyvenamoji vieta"><br>
+            Telefono numeris:<br>
+            +3706 <input type="text" name="numeris" id="numeris" onkeypress="isInputNumber(event)">
+            <br>
+            <!--<button type="button" value="Pateikti" onclick="buttonPop()">Pateikti</button> -->
+            <button type="button" id="submit-button" value="button"  onclick="validateForm()">Pateikti</button>
+            <button type="reset" value="Reset">Išvalyti</button>
+        </form>
+    </body>
 </html>
